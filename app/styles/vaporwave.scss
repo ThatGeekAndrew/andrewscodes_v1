@@ -1,0 +1,299 @@
+/**
+* Vaporwave Section
+**/
+
+@import 'https://fonts.googleapis.com/css?family=VT323';
+
+$cells: 320;
+
+.vapor {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.vapor h1 {
+  padding-top: 30px;
+  text-align: center;
+  color: rgba(255,100,100,0.85);
+  font-family: 'VT323', monospace;
+  font-size: 47pt;
+  text-transform: uppercase;
+  z-index: 3;
+}
+
+.sky {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: rgb(176,9,122);
+  background: -webkit-radial-gradient(
+    center, ellipse cover, 
+    rgba(255,100,100,1) 0%,
+    rgba(248,7,146,1) 22%,
+    rgba(176,9,122,1) 46%,
+    rgba(102,20,94,1) 100%);
+  background: radial-gradient(
+    center, ellipse cover,
+    rgba(255,100,100,1) 0%,
+    rgba(248,7,146,1) 22%,
+    rgba(176,9,122,1) 46%,
+    rgba(102,20,94,1) 100%);
+  z-index: 0;
+}
+
+.sky:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -25%;
+  width: 100%;
+  height: 150%;
+  opacity: 0.15;
+  filter: blur(5px);
+  background-image: url('/images/win95.gif');
+  animation: animatedBackground 60s linear infinite;
+  @keyframes animatedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+  }
+  z-index: 1;
+}
+
+.sun {
+  position: absolute;
+  bottom: 250px;
+  left:40%;
+  width: 20%;
+  height: 20vw;
+  filter: blur(1px);
+  border-radius: 1000px;
+  background: rgb(252,8,108);
+  background: linear-gradient(
+    to bottom,
+    rgba(252,8,108,1) 15%,
+    rgba(240,88,127,1) 50%,
+    rgba(255,107,109,1) 90%);
+  z-index: 2;
+}
+
+.ground {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgb(142,76,127);
+  background: linear-gradient(
+    to top,
+    rgba(148,208,255,1) 20%,
+    rgba(255,106,213,1) 80%);
+}
+
+.car {
+  position: absolute;
+  bottom: 10px;
+  left: 49vw;
+  width: 148px;
+  height: 125px;
+  background: url('/images/car.png');
+  animation: driving 8s alternate infinite;
+  @keyframes driving {
+    0% { transform: translate(0px, 0px) scale(1.5, 1.5); }
+    60% { transform: translate(-30px, -20px) scale(1.45, 1.45); }
+    100% { transform: translate(-15px, -20px) scale(1.45, 1.45); }
+  }
+  z-index: 3;
+}
+
+.car img {
+  margin-top: -27px;
+  margin-left: 75px;
+  width: 65px;
+}
+
+.haze {
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-top: -25px;
+  background: rgba(0,0,0,0.45);
+  -webkit-filter: blur(15px);
+  filter: blur(15px);
+  z-index: 1;
+}
+
+img.palm {
+  position: absolute;
+  top: -50%;
+  left: 37%;
+  width: 200px;
+  transform: scale(0.025, 0.025);
+  -webkit-animation: hueRotate 8s linear infinite,
+    palmPassing 8s ease-in infinite;
+  animation: hueRotate 8s linear infinite,
+    palmPassing 8s ease-in infinite;
+  @keyframes palmPassing {
+    100% { transform: scale(3, 3) translate(-150%, 0%); }
+  }
+  z-index: 1;
+}
+
+img.palmrev {
+  position: absolute;
+  top: -50%;
+  right: 37%;
+  width: 200px;
+  transform: scale(-0.025, 0.025);
+  -webkit-animation: hueRotate 8s linear infinite,
+    revPassing 8s ease-in infinite;
+  animation: hueRotate 8s linear infinite,
+    revPassing 8s ease-in infinite;
+  -webkit-animation-delay: -4s; /* Chrome, Safari, Opera */
+  animation-delay: -4s;
+  @keyframes revPassing {
+    100% { transform: scale(-3, 3) translate(-150%, 0%); }
+  }
+  z-index: 1;
+}
+
+.grid-container {
+  height: 320px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 480px;
+  transform: translate3d(0, 0, 0);
+}
+
+.grid-container:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -25%;
+  width: 100%;
+  height: 150%;
+  opacity: 0.15;
+  animation: animatedBackground 60s linear reverse infinite;
+  background: url('/images/wov.png');
+  z-index: 2;
+}
+
+.grid {
+  width: 400px;
+  height: 8000px;
+  color: #f12;
+  background: rgba(153,153,153,0.6);
+  z-index: 3;
+  animation:
+    slide-up .5s linear infinite;
+  @keyframes slide-up {
+  from {
+    transform:
+      rotateX(70deg)
+      translateY(-3600px);
+  }
+  to {
+    
+    $s-color: rgba(blue, .5);
+    transform:
+      rotateX(70deg)
+      translateY(-3500px);
+    box-shadow:
+      -72px 0 80px -64px $s-color,
+       72px 0 80px -64px $s-color;
+  }
+}
+  
+  div {
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    float: left;
+    border: 10px solid;
+    border-right: none;
+    border-top-width: 2.5px;
+    border-bottom-width: 2.5px;
+    animation:
+      shine 1s linear infinite;
+    
+    &:nth-child(4n) {
+      border-right: 10px solid
+    }
+    
+    @for $i from 1 through $cells {
+      $j: $cells - ($i - 1);
+      &:nth-child(#{$i}) {
+        opacity:
+          1 - ($j / $cells) * 2.5;
+        animation-delay:
+          ceil($j / 4) * 50ms;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .vapor h1 {
+    font-size: 42pt;
+  }
+  
+  .sky {
+    background: -webkit-radial-gradient(
+    bottom, ellipse cover, 
+    rgba(255,100,100,1) 0%,
+    rgba(248,7,146,1) 22%,
+    rgba(176,9,122,1) 46%,
+    rgba(176,9,122,1) 46%,
+    rgba(102,20,94,1) 100%);
+    background: radial-gradient(
+    bottom, ellipse cover,
+    rgba(255,100,100,1) 0%,
+    rgba(248,7,146,1) 22%,
+    rgba(176,9,122,1) 46%,
+    rgba(176,9,122,1) 46%,
+    rgba(102,20,94,1) 100%);
+  }
+  
+  .sun {
+    left: 30%;
+    width: 40%;
+    height: 40vw;
+  }
+  
+  img.palm {
+    left: 32%;
+  }
+
+  img.palmrev {
+    right: 32%;
+  }
+}
+
+@media (max-width: 600px) {
+  .vapor h1 {
+    font-size: 32pt;
+  }
+  
+  .sun {
+    left: 25%;
+    width: 50%;
+    height: 50vw;
+  }
+  
+  img.palm {
+    left: 25%;
+  }
+
+  img.palmrev {
+    right: 25%;
+  }
+}
+
+// Note to future self:
+// This A E S T H E T I C breaks down at 270px.
+// This is not apart of the aesthetic. Please fix.

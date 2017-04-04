@@ -1,0 +1,85 @@
+/**
+* Skew Section
+**/
+
+.skew {
+  position: relative;
+  color: #333;
+  background: #fff;
+  margin-top: -50px;
+  margin-bottom: -50px;
+  transform: skew(0deg, -2.6deg);
+  padding: 120px 100px 180px 100px;
+  background-image: url('/images/ignasi.png');
+  z-index: 2;
+}
+
+.skew .content {
+  transform: skew(0deg, 2.6deg);
+}
+
+.about {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.skew h1 {
+  color: #000;
+  font-size: 2em;
+  font-family: 'Anton', sans-serif;
+  text-shadow: 3px 3px 0px #6699ff;
+  text-transform: uppercase;
+  opacity: 0.75;
+  text-align: right;
+  padding-right: 100px;
+}
+
+.skew img {
+  width: 250px;
+  height: 250px;
+  margin: 0 60px;
+  border-radius: 1000px;
+  transition: all 100ms ease-in-out;
+}
+
+.skew img:hover {
+  filter: saturate(50%) contrast(150%);
+}
+
+.skew p {
+  text-align: left;
+}
+
+.skew p em {
+  color: #6699ff;
+  font-style: normal;
+}
+
+@media (max-width: 1000px) {
+  .skew {
+    padding: 120px 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skew {
+    padding: 100px 0;
+  }
+  .skew h1 {
+    text-align: center;
+    padding-right: 0;
+  }
+  .skew img {
+    margin: 0;
+  }
+  .about {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about p {
+    padding: 0 15px;
+    text-align: center;
+  }
+}

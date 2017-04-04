@@ -1,0 +1,40 @@
+/**
+* Layout styles
+**/
+html,
+body {
+  margin: 0px;
+  max-width: 100%;
+  outline: none;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+  transition: all .25s ease-in-out;
+}
+
+.moveOver {
+  margin: 0 0 0 300px;
+  
+  #content {
+    filter: brightness(50%);
+  }
+}
+
+#content {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  z-index: 1;
+  background: #fff;
+  transition: all .25s ease-in-out;
+}
+
+.content {
+  font-size: 16pt;
+}

@@ -1,0 +1,90 @@
+<div id="wrapper">
+	<div id="logo">
+		<button><i class="icon closeable active"><span></span></i> andrews.codes<span class="cursor"></span></button>
+	</div>
+
+	<div class="vapor">
+	  <div class="sky">
+	    <h1>Thanks for visiting!</h1>
+	    <div class="sun"></div>
+	  </div>
+	  
+	  <div class="ground">
+	    <div class="haze"></div>
+	    <img class="palm" src="/images/palmtree.png" alt="A palm tree." />
+	    <img class="palmrev" src="/images/palmtree.png" alt="Another palm tree." />
+	    <div class="car"><img src="/images/spookyskeletal.gif" alt="spooky skeleton" /></div>
+	    <div class="grid-container">
+	      <div class="grid" id="grid"></div>
+	    </div>
+	  </div>
+	  <audio loop>
+	    <source src="/audio/resonance.mp3" type="audio/mpeg">
+	    Sucks. Your browser does not support the audio element. Loser.
+	  </audio>
+	</div>
+</div>
+
+<script>
+function isElementInViewport (el) {
+
+    //special bonus for those using jQuery
+    if (typeof jQuery === "function" && el instanceof jQuery) {
+        el = el[0];
+    }
+
+    var rect = el.getBoundingClientRect();
+
+    return(
+        rect.bottom >= 0 && 
+        rect.right >= 0 &&
+        rect.top <= $(window).height() && 
+        rect.left <= $(window).width()
+    );
+}
+
+function onVisibilityChange(el, callback) {
+    var old_visible;
+    return function () {
+        var visible = isElementInViewport(el);
+        if (visible != old_visible) {
+            old_visible = visible;
+            if (typeof callback == 'function') {
+                callback(visible);
+            }
+        }
+    }
+}
+
+$(document).ready(function() {
+	var handler = onVisibilityChange($('.vapor'), function(visible) {
+      var music = $('.vapor audio')[0];
+      if(visible) {
+        music.volume = 0.15;
+        music.play();
+      } else {
+        music.pause();
+      }
+  });
+
+  //jQuery
+  $(window).on('DOMContentLoaded load resize scroll', handler); 
+  /**
+  * Grid by Pavlovsk, some edits made.
+  * http://codepen.io/pavlovsk/pen/AXGYYv
+  **/
+  // Instead of writing HAML
+  function nJoin(n, fn) {
+    return new Array(n)
+      .join(' ')
+      .split(' ')
+      .map(typeof fn === 'function' ?
+        fn : e => fn)
+      .join('')
+  }
+
+  // Create <div></div> 320 times
+  var cells = nJoin(320, '<div></div>')
+  grid.innerHTML = cells
+});
+</script>

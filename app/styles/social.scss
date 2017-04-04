@@ -1,0 +1,109 @@
+/**
+* Social Section
+**/
+
+.social {
+  position: relative;
+  margin: -150px 0 -150px 0;
+  padding: 350px 0 200px;
+  background-image: url('/images/stardust.png');
+  transform: skew(0deg, 2.6deg);
+  z-index: 1;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #6699ff;
+    mix-blend-mode: multiply;
+    opacity: 1;
+  }
+}
+
+.social .content {
+  text-align: center;
+  transform: skew(0deg, -2.6deg);
+}
+
+.social h1 {
+  color: #fff;
+  font-size: 2em;
+  font-family: 'Anton', sans-serif;
+  text-shadow: 3px 3px 0px #6699ff;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.social p {
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  opacity: 0.75;
+}
+
+.networks a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.network {
+  width: 15%;
+  padding: 35px 0;
+  font-size: 36pt;
+  border-radius: 2px;
+  display: inline-block;
+  transition: transform 0.1s ease-in;
+}
+
+.network:hover {
+  transform: scale(1.2, 1.2);
+  animation: textShadowRotate 1.5s linear infinite;
+  @keyframes textShadowRotate {
+    0% {
+      text-shadow:  0.22rem -0.22rem rgba(magenta, 0.75),
+                   -0.22rem -0.22rem rgba(cyan, 0.75),
+                    0        0.22rem rgba(yellow, 0.75);
+    }
+    33.3% {
+      text-shadow:  0        0.22rem rgba(magenta, 0.75),
+                    0.22rem -0.22rem rgba(cyan, 0.75),
+                   -0.22rem -0.22rem rgba(yellow, 0.75);
+    }
+    66.6% {
+      text-shadow: -0.22rem -0.22rem rgba(magenta, 0.75),
+                    0        0.22rem rgba(cyan, 0.75),
+                    0.22rem -0.22rem rgba(yellow, 0.75);
+    }
+    100% {
+      text-shadow:  0.22rem -0.22rem rgba(magenta, 0.75),
+                   -0.22rem -0.22rem rgba(cyan, 0.75),
+                    0        0.22rem rgba(yellow, 0.75);
+    }
+  }
+}
+
+.facebook {
+  background: #3b5998;
+}
+
+.snapchat {
+  background: #fffc00;
+}
+
+.linkedin {
+  background: #007bb6;
+}
+
+.soundcloud {
+  background: #ff3a00;
+}
+
+.codepen {
+  background: #000;
+}
+
+.github {
+  background: #333;
+}

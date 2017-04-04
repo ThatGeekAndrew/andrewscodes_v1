@@ -1,0 +1,41 @@
+/**
+* Main styles for www.andrews.codes
+* 
+* Structure:
+* @import for any external code styling such as, font's, icons, etc.
+* Major layout styles, only for site-wide components. These are usually id's.
+* Individual components and the layout specific to each. This is for minor component styles with reasonably sized lengths.
+* @import styles for any components with large codebases, to avoid clutter with main pages length.
+*
+**/
+
+@import url(https://fonts.googleapis.com/css?family=Bangers|Comfortaa:700|Raleway|Pacifico|Anton);
+
+$dark: #000000;
+$light: #ffffff;
+$primary: #6699ff;
+$header: 'Anton', sans-serif;
+$fire: 'Bangers', cursive;
+
+@mixin heading {
+  color: $dark;
+  font-size: 2em;
+  font-family: $header;
+  text-shadow: 3px 3px 0px $primary;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+@import 'global.scss';
+
+@import 'menu.scss';
+@import 'fold.scss';
+@import 'about.scss';
+@import 'social.scss';
+@import 'portfolio.scss';
+@import 'vaporwave.scss';
+@import 'footer.scss';
+
+@import 'work.scss';
+
+@import 'animations.scss';

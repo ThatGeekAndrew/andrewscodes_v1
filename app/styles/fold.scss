@@ -1,0 +1,91 @@
+/**
+* Fold Section
+**/
+
+.fold {
+  position: relative;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  padding: 30vh 0;
+}
+
+.fold h1 {
+  margin: 0;
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  font-size: 6rem;
+  text-shadow: 1px 1px 1px #000;
+  opacity: 0.75;
+}
+
+.lead {
+  opacity: 0.65;
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 100px;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.fold-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -2;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #6699ff;
+    mix-blend-mode: multiply;
+  }
+}
+
+.fold-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fold-video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fold-video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .fold-bg {
+    background: url('/images/buttons.jpg') center center / cover no-repeat;
+    background-attachment: fixed;
+  }
+
+  .fold-video {
+    display: none;
+  }
+
+  .fold h1 {
+    font-size: 3rem;
+  }
+
+  .lead {
+    font-size: 1.2rem;
+  }
+}

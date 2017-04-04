@@ -1,0 +1,129 @@
+@keyframes palmPassing {
+  100% { transform: scale(3, 3) translate(-150%, 0%); }
+}
+
+@keyframes revPassing {
+  100% { transform: scale(-3, 3) translate(-150%, 0%); }
+}
+
+@keyframes hueRotate {
+  0% { filter: hue-rotate(-180deg) blur(10px); }
+  50% { filter: hue-rotate(-45deg) blur(0px); }
+  100% { filter: hue-rotate(0deg); }
+}
+
+
+@keyframes driving {
+  0% { transform: translate(0px, 0px) scale(1.5, 1.5); }
+  60% { transform: translate(-30px, -20px) scale(1.45, 1.45); }
+  100% { transform: translate(-15px, -20px) scale(1.45, 1.45); }
+}
+
+@keyframes animatedBackground {
+  from { background-position: 0 0; }
+  to { background-position: 100% 0; }
+}
+
+@keyframes slide-up {
+  from {
+    transform:
+      rotateX(70deg)
+      translateY(-3600px);
+  }
+  to {
+    
+    $s-color: rgba(blue, .5);
+    transform:
+      rotateX(70deg)
+      translateY(-3500px);
+    box-shadow:
+      -72px 0 80px -64px $s-color,
+       72px 0 80px -64px $s-color;
+  }
+}
+
+@keyframes shine {
+  50% {
+    color: hotpink;
+    background: currentColor;
+    box-shadow:
+      0 0 36px 20px,
+      inset 0 0 36px;
+  }
+}
+
+/* Primary text shadow */
+
+@keyframes fire {
+  0% {
+    text-shadow: 
+      0 0 4px #ccc,
+      0 -5px 4px #ff3,
+      2px -10px 6px #fd3,
+     -2px -15px 11px #f80,
+      2px -18px 18px #f20;
+  }
+  20% {
+    text-shadow: 
+      0 0 4px #ccc,
+      0 -5px 4px #ff3,
+      1px -9px 6px #fd3,
+     -1px -15px 11px #f80,
+      1px -16px 18px #f20;
+  }
+  40% {
+    text-shadow: 
+      0 0 4px #ccc,
+      0 -5px 5px #ff3,
+      0px -10px 6px #fd3,
+      0px -15px 11px #f80,
+      0px -17px 18px #f20;
+  }
+  60% {
+    text-shadow: 
+      0 0 4px #ccc,
+      0 -5px 4px #ff3,
+     -1px -11px 6px #fd3,
+      1px -15px 11px #f80,
+     -1px -18px 18px #f20;
+  }
+  80% {
+    text-shadow: 
+      0 0 4px #ccc,
+      0 -5px 4px #ff3,
+      2px -10px 6px #fd3,
+     -2px -15px 11px #f80,
+      2px -19px 18px #f20;
+  }
+  100% {
+    text-shadow: 
+      0 0 4px #ccc,
+      0 -5px 4px #ff3,
+      2px -10px 6px #fd3,
+     -2px -15px 11px #f80,
+      2px -18px 18px #f20;
+  }
+}
+
+@keyframes glitchy {
+  0% {
+    -webkit-filter: saturate(8);
+    filter: saturate(8);
+    left: 10px;
+  }
+  25% {
+    -webkit-filter: hue-rotate(180deg);
+    filter: hue-rotate(180deg);
+    right: 10px;
+  }
+  50% {
+    -webkit-filter: invert(.8);
+    filter: invert(.8);
+    top: 10px;
+  }
+  100% {
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
+    bottom: 10px;
+  }
+}

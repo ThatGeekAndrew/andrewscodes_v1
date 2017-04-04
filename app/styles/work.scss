@@ -1,0 +1,33 @@
+.work {
+	padding: 100px 50px;
+}
+
+.work h1 {
+	text-align: right;
+	transform: skew(0deg, -1.7deg);
+}
+
+.work .title {
+	background: #000;
+	color: #fff;
+	padding: 15px 40px;
+	margin-bottom: 50px;
+}
+
+.desc li {
+	color: #333;
+	font-weight: bold;
+	list-style: none;
+	text-align: right;
+}
+
+.gallery {
+	text-align: center;
+}
+
+.gallery img {
+	width: 33%;
+	height: 100%;
+}
+
+/* gallery pics should be 950x640 */
