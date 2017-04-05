@@ -434,9 +434,9 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>'
         }, {
           expand: true,
-          cwd: 'bower_components/fontawesome/',
+          cwd: 'bower_components/font-awesome/*',
           src: 'fonts/*',
-          dest: '<%= yeoman.dist %>'
+          dest: '<%= yeoman.dist %>/fonts'
         }]
       },
       styles: {
