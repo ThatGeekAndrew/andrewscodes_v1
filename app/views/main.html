@@ -15,12 +15,14 @@
   <section id="content">
     <div class="fold">
       <h1>Websites for <span id="changingword">everyone</span></h1>
-      <p class="lead">This is a platform for telling stories, let's tell yours right.</p>
+      <p class="lead">The web is for telling your story, I help tell it right.</p>
       <div class="fold-bg">
         <video loop muted autoplay poster="images/buttons.jpg" class="fold-video">
-          <!-- <source src="video/buttons.webm" type="video/webm"> -->
+          <!-- Will need to make this type
+          <source src="video/buttons.webm" type="video/webm"> -->
           <source src="video/buttons.mp4" type="video/mp4">
-          <!-- <source src="video/buttons.ogv" type="video/ogg"> -->
+          <!-- Will need to make this type
+          <source src="video/buttons.ogv" type="video/ogg"> -->
         </video>
       </div>
     </div>
@@ -34,9 +36,9 @@
             </a>
 
             <div>
-              <p>I've been making Web Sites &amp; Apps with the most kickass technology I can get my hands on for <em>over five years</em>. I'm <em>self taught</em> and always eager to learn more. I focus on <em>User Experience</em> and desiging intuitive, enjoyable products. My skillset leverages <em>Graphic Design</em>, <em>Web Development</em>, Social Media, Video Editing, Advertising and many other creative solutions to achieve results for clients. I am able to build small components or entire systems to achieve these goals.</p>
+              <p>I've been making Web Sites &amp; Apps with the most kickass technology I can get my hands on for <em>over five years</em>. I'm <em>self taught</em> and always eager to learn more. I focus on <em>User Experience</em> and desiging intuitive, enjoyable products. My skillset leverages <em>Graphic Design</em>, <em>Web Development</em>, Social Media, Video Editing, Advertising and many other creative solutions to achieve results for clients. I am able to build small components or entire systems to achieve these goals. I use javascript, </p>
 
-              <p>In my personal time, I make <em>original content</em> for Facebook; <em>Memes</em>, shenanigans or various things that, sometimes, gain notariety. I enjoy playing video games, currently I play <em>Old School Runescape</em> and GTA5. Occasionally I will stream to twitch or livecoding. I live with my girlfriend of 3 years, Connie, and our ball python, Osiris.</p>
+              <p>In my personal time, I make <em>original content</em> for Facebook; <em>Memes</em>, shenanigans or various things that, sometimes, gain notariety. I live with my girlfriend of 3 years, Connie, and our ball python, Osiris.</p>
             </div>
           </div>
 
@@ -45,7 +47,7 @@
 
     <div class="social">
       <div class="content">
-        <h1>Social Media &amp; Profiles</h1>
+        <h1>Social Media Profiles</h1>
         <div class="networks">
 
           <a href="https://www.facebook.com/geeksmarter" target="_blank">
@@ -140,6 +142,7 @@ $(document).ready(function() {
       'non-profits',
       'individuals',
       'researchers',
+      'leaders',
       'humor',
       'satire',
       'free speech',
@@ -179,7 +182,7 @@ $(document).ready(function() {
         var random = Math.floor(Math.random()* words.length);
         $(this).text(words[random]).fadeIn();
       });
-    }, 6000);
+    }, 4000);
   })();
 
   $('button#logo').on('click', function(){

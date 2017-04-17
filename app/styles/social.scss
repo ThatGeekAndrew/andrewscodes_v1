@@ -107,3 +107,15 @@
 .github {
   background: #333;
 }
+
+@media (max-width: 767px) {
+  .social h1 {
+    font-size: 1.5em;
+  }
+
+  .network {
+    width: 30%;
+    padding: 35px 0;
+    margin-bottom: 5px;
+  }
+}

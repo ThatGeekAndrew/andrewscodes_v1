@@ -142,6 +142,9 @@ html, body {
 }
 
 @media (max-width: 767px) {
+  .portfolio h1 {
+    font-size: 1.5em;
+  }
   .thumbnail {
     width: 48%;
     margin-bottom: 2%;

@@ -25,6 +25,7 @@ button#logo {
   border-radius: 2px;
   border: 1px solid #999;
   animation: blink 1.25s infinite;
+  will-change: opacity;
   @keyframes blink {
     0% {opacity: 0;}
     40% {opacity: 0;}
