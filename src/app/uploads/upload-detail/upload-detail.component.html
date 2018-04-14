@@ -1,2 +1,6 @@
-<strong>{{upload.name}}</strong>
-<button (click)='deleteUpload()' class="button is-danger is-small">Delete</button><br>
+<div class="card">
+  <img class="card-img" [src]="upload.url" alt="{{upload.name}}">
+  <div class="card-img-overlay p-0">
+    <button (click)='deleteUpload()' class="close px-2">&times;</button>
+  </div>
+</div>

@@ -1,8 +1,12 @@
-<div>
-  <h3>{{ note.content }}</h3>
-  <span class="button is-small is-info" (click)='addHeartToNote(note.hearts)'>
-    Heart <i class="fa fa-heart"></i>
-  </span>
-  <span class="button is-small is-danger" (click)='deleteNote(note?.id)'>Delete</span>
-  <p>This note has been hearted {{ note.hearts || 0 }} times.</p>
+<div class="card card-body">
+  <h3 class="card-title">{{ note.content }}</h3>
+  <div>
+    <span class="btn btn-sm btn-danger" (click)='addHeartToNote(note.hearts)'>
+      Heart <i class="fa fa-heart"></i>
+    </span>
+    <span class="btn btn-sm btn-link text-danger ml-5" (click)='deleteNote(note?.id)'>
+      Delete
+    </span>
+  </div>
+  <small class="card-text">This note has been hearted {{ note.hearts || 0 }} times.</small>
 </div>

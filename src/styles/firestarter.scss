@@ -1,85 +1,24 @@
 @import 'variables';
-@import url('https://fonts.googleapis.com/css?family=Palanquin|Source+Sans+Pro');
-
-
+@import url('https://fonts.googleapis.com/css?family=Palanquin');
 
 ///// Content
 
-$body-font: 'Source Sans Pro', sans-serif;
 $heading-font: 'Palanquin', sans-serif;
 
 body {
-  font-family: $body-font;
-}
-
-h1, h2, h3, h4, h5, h6, {
-  font-family: $heading-font;
-}
-
-a {
-  color: #1c90f3;
-  font-weight: bold;
-  &:hover {
-    color: darken(#1c90f3, 10%)
-  }
-}
-
-#wrapper {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-.content {
-    // min-height: 70vh;
-    padding: 2vw;
-    flex: 1
-}
-
-.videoWrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 25px;
-  height: 0;
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+  margin-top: 4rem;
+  overflow-y: scroll;
 }
 
 .logo {
   font-size: 1.2em;
-  font-weight: bold;
+  font-weight: 700;
   font-family: $heading-font;
   color: #1D262F;
-  img { 
+  img {
     margin-right: 5px;
   }
 }
-  
-.footer {
-  border-top: 2px solid $gray-lightest;
-  min-height: 100px;
-  text-align: center;
-  font-size: 0.9em;
-  background: #f9f9f9;
-}
-
-
-.text-truncate {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.box {
-  border-radius: 0px;
-  margin-top: 5px;
-}
-
 
 ///// Social Buttons
 
@@ -90,11 +29,7 @@ a {
 .btn-social {
   color: #fff;
   i {
-    margin-right: 5px;
-  }
-  &:hover {
-    color: #fff;
-    box-shadow: 0 14px 26px -12px rgba(0, 0, 0, 0.2), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
   }
   .btn-block {
     margin-bottom: 10px;
@@ -102,18 +37,26 @@ a {
 
 }
 
-.btn-twitter {
+.btn-twitter:hover,
+.btn-twitter:focus {
+  color: white;
   background-color: #55ACEE;
 }
-.btn-facebook {
+.btn-facebook:hover,
+.btn-facebook:focus {
+  color: white;
   background-color: #3B5998;
 }
 
-.btn-github {
+.btn-github:hover,
+.btn-github:focus {
+  color: white;
   background-color: #333333;
 }
 
-.btn-google {
+.btn-google:hover,
+.btn-google:focus {
+  color: white;
   background-color: #DD4B39;
 }
 

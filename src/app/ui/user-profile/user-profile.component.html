@@ -1,22 +1,25 @@
-<div class="box" >
+<div class="sticky-top">
   <div *ngIf="auth.user | async; then authenticated else guest">
           <!-- template will replace this div -->
   </div>
 </div>
 
 <!-- User NOT logged in -->
-<ng-template #guest class="box">
-  <h3>Howdy, GUEST</h3>
-  <p class="card-text">Login to get started...</p>
-  <button class="button" routerLink="/login">Login</button>
+<ng-template #guest>
+  <div class="card card-body">
+    <h4 class="card-title">Howdy, GUEST</h4>
+    <p class="card-text">Login to get started...</p>
+    <button class="btn btn-primary" routerLink="/login">Login</button>
+  </div>
 </ng-template>
 
 <!-- User logged in -->
 <ng-template #authenticated>
-  <div *ngIf="auth.user | async as user">
-    <h3>Howdy, {{ user.displayName }}</h3>
-    <img class="card-img-top" [src]="user.photoURL || 'https://api.adorable.io/avatars/109/fire.png'" width=50px>
-    <p class="text-truncate">UID: {{ user.uid }}</p>
-    <button class="button" (click)="logout()">Logout</button>
+  <div class="card" *ngIf="auth.user | async as user">
+    <img class="card-img-top" [src]="user.photoURL || 'https://api.adorable.io/avatars/109/fire.png'">
+    <div class="card-body">
+      <h4 class="card-title">Howdy, {{ user.displayName }}</h4>
+      <p class="card-text">UID: {{ user.uid }}</p>
+    </div>
   </div>
 </ng-template>

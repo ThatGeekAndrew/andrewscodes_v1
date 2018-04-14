@@ -5,6 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+///// ngBootstrap
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 ///// Start FireStarter
 
 // Core
@@ -40,6 +44,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
     UiModule,
     NotesModule,
     AngularFireModule.initializeApp(firebaseConfig),
+    NgbModule.forRoot(),
   ],
   bootstrap: [
     AppComponent,

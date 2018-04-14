@@ -1,15 +1,17 @@
-<h3 [ngClass]="{ 'strike-out': !item.active }">
-  {{ item.title || 'missing title' }}
-</h3>
+<div class="card">
+  <h3 class="card-header" [ngClass]="{ 'strike-out': !item.active }">
+    {{ item.title || 'missing title' }}
+  </h3>
 
-<div class="card-content">
-  Task Active?: {{ item.active }}<br>
-  {{ item.timeStamp | date: 'medium' }}
-</div>
+  <div class="card-body">
+    Task Active?: {{ item.active }}<br>
+    {{ item.timeStamp | date: 'medium' }}
+  </div>
 
-<div class="card-footer">
-  <span class="button is-small is-info card-footer-item" (click)='updateTimeStamp()'>Update Timestamp</span>
-  <span class="button is-small is-success card-footer-item" *ngIf='item.active' (click)='updateActive(false)'>Mark Complete</span>
-  <span class="button is-small is-warning card-footer-item" *ngIf='!item.active' (click)='updateActive(true)'>Mark Incomplete</span>
-  <span class="button is-small is-danger card-footer-item" (click)='deleteItem()'>Delete</span>
+  <div class="card-footer d-flex">
+    <span class="btn btn-small btn-outline-info" (click)='updateTimeStamp()'>Update Timestamp</span>
+    <span class="btn btn-small btn-outline-success ml-2" *ngIf='item.active' (click)='updateActive(false)'>Mark Complete</span>
+    <span class="btn btn-small btn-outline-warning ml-2" *ngIf='!item.active' (click)='updateActive(true)'>Mark Incomplete</span>
+    <span class="btn btn-small btn-link text-danger ml-auto" (click)='deleteItem()'>Delete</span>
+  </div>
 </div>
