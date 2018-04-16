@@ -1,7 +1,7 @@
 {
-  "name": "firestarter",
+  "name": "andrews.codes",
   "version": "0.0.0",
-  "license": "MIT",
+  "license": "Private",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --aot",
