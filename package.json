@@ -25,6 +25,7 @@
     "@angular/router": "^5.0.2",
     "@ng-bootstrap/ng-bootstrap": "^1.1.1",
     "angularfire2": "^5.0.0-rc.4",
+    "animate.css": "^3.6.1",
     "bootstrap": "4.0.0",
     "core-js": "^2.5.1",
     "firebase": "^4.6.2",

@@ -390,6 +390,10 @@ angularfire2@^5.0.0-rc.4:
   version "5.0.0-rc.4"
   resolved "https://registry.yarnpkg.com/angularfire2/-/angularfire2-5.0.0-rc.4.tgz#65c4d2ed768c3251b0b611ce51d6b42ac8afeabc"
 
+animate.css@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/animate.css/-/animate.css-3.6.1.tgz#4ea8a48556378bc8d7535224296c4c0dac9229de"
+
 ansi-align@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/ansi-align/-/ansi-align-1.1.0.tgz#2f0c1658829739add5ebb15e6b0c6e3423f016ba"
