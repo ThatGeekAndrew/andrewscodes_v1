@@ -1,25 +1,9 @@
-.loading {
-  margin-top: -4rem;
-  opacity: 0;
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  background: #272c33;
-  padding-top: 25vh;
-  text-align: center;
-  z-index: -1;
-  transition: opacity .8s ease-out;
-}
-
 app-root:empty + .loading {
   opacity: 1;
   z-index: 100;
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
   h1 {
     font-family: "courier", monospace;
-    color: #EEE;
+    color: limegreen;
     margin-bottom: 50px;
   }
 }

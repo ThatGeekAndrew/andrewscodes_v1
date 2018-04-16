@@ -22,21 +22,6 @@ body {
 
 ///// Social Buttons
 
-.input {
-  margin-bottom: 5px;
-}
-
-.btn-social {
-  color: #fff;
-  i {
-    margin: 1rem 0;
-  }
-  .btn-block {
-    margin-bottom: 10px;
-  }
-
-}
-
 .btn-twitter:hover,
 .btn-twitter:focus {
   color: white;
@@ -58,12 +43,4 @@ body {
 .btn-google:focus {
   color: white;
   background-color: #DD4B39;
-}
-
-.btn-social.button[disabled] {
-  color: #333333;
-  background-color: #fff;
-  border-color: #dbdbdb;
-  box-shadow: none;
-  opacity: .6;
 }
