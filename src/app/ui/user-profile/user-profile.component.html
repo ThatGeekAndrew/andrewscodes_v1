@@ -1,4 +1,4 @@
-<div class="sticky-top">
+<div class="sticky-top mb-2">
   <div *ngIf="auth.user | async; then authenticated else guest">
           <!-- template will replace this div -->
   </div>
@@ -7,9 +7,10 @@
 <!-- User NOT logged in -->
 <ng-template #guest>
   <div class="card card-body">
-    <h4 class="card-title">Howdy, GUEST</h4>
-    <p class="card-text">Login to get started...</p>
-    <button class="btn btn-primary" routerLink="/login">Login</button>
+    <h4 class="card-title">Login to begin!</h4>
+    <button class="btn btn-primary" routerLink="/login">
+      Login <i class="fas fa-sign-in-alt"></i>
+    </button>
   </div>
 </ng-template>
 
@@ -18,7 +19,7 @@
   <div class="card" *ngIf="auth.user | async as user">
     <img class="card-img-top" [src]="user.photoURL || 'https://api.adorable.io/avatars/109/fire.png'">
     <div class="card-body">
-      <h4 class="card-title">Howdy, {{ user.displayName }}</h4>
+      <h4 class="card-title">{{ user.displayName }}</h4>
       <p class="card-text">UID: {{ user.uid }}</p>
     </div>
   </div>
