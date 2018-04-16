@@ -1,32 +1,25 @@
-<div *ngIf="currentUpload">
-  <div class="progress">
-    <progress class="progress-bar bg-success" min=1 max=100 value="{{ currentUpload?.progress }}%"></progress>
+<div class="card card-body col-lg-8 col-md-10 mx-auto">
+  <h3 class="card-title">File Uploader</h3>
+  <div class="d-flex justify-content-center pb-1">
+    <div class="custom-file">
+      <input type="file" (change)="detectFiles($event)" class="custom-file-input" id="customFile" multiple>
+      <label class="custom-file-label" for="customFile"><i class="mr-2 fal fa-search"></i> Browse Files</label>
+    </div>
+    <button class="btn btn-primary ml-2"
+      [disabled]="!selectedFiles"
+      (click)="uploadMulti()">
+      Upload
+      <i class="ml-1 fas fa-cloud-upload-alt"></i>
+    </button>
   </div>
-</div>
 
+  <small class="text-muted">
+    Upload files related to your project here.
+  </small>
 
-<div class="box">
-  <h3>Single File Upload</h3>
-
-  <label>
-    <input type="file" class="button" (change)="detectFiles($event)">
-  </label>
-  <button class="btn btn-primary"
-    [disabled]="!selectedFiles"
-    (click)="uploadSingle()">
-    Upload Single
-  </button>
-
-  <hr>
-
-  <h3>Multiple File Upload</h3>
-
-  <label>
-    <input type="file" class="button" (change)="detectFiles($event)" multiple>
-  </label>
-  <button class="btn btn-primary"
-    [disabled]="!selectedFiles"
-    (click)="uploadMulti()">
-    Upload Multiple
-  </button>
+  <div *ngIf="currentUpload">
+    <hr>
+    <progress class="progress w-100" min=1 max=100 value="{{ currentUpload?.progress }}"></progress>
+    <small class="text-muted">Progress: {{currentUpload?.name}} | {{currentUpload?.progress}}% Complete</small>
+  </div>
 </div>

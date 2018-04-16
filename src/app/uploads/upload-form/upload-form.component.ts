@@ -18,13 +18,17 @@ export class UploadFormComponent {
 
   detectFiles($event: Event) {
       this.selectedFiles = ($event.target as HTMLInputElement).files;
+      console.log(this.selectedFiles)
+      console.log($event.target)
   }
 
   uploadSingle() {
     const file = this.selectedFiles;
     if (file && file.length === 1) {
+
       this.currentUpload = new Upload(file.item(0));
       this.upSvc.pushUpload(this.currentUpload);
+
     } else {
       console.error('No file found!');
     }
