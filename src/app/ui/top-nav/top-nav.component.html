@@ -23,10 +23,24 @@
         <li class="nav-item" [routerLinkActive]="['active']" *ngIf="(auth.user | async);">
           <a class="nav-link" routerLink="/uploads">Uploads</a>
         </li>
-        <li class="nav-item" [routerLinkActive]="['active']" *ngIf="(auth.user | async);">
-          <a href="" class="nav-link" (click)="logout()">Logout</a>
+        <li class="nav-item" *ngIf="(auth.user | async);">
+          <a (click)="open(logoutModal)" class="nav-link">Logout</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
+<ng-template #logoutModal let-d="dismiss" let-c="close">
+  <div class="modal-header">
+    <h4 class="modal-title">Are you sure?</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body my-3">
+    <button class="btn btn-danger btn-block btn-lg" (click)="c('logout')">
+      Logout <i class="fas fa-sign-out-alt"></i>
+    </button>
+  </div>
+</ng-template>
