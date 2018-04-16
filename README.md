@@ -4,7 +4,7 @@ Thanks for uh... reading my Website's Repository's README... Nerd.
 
 ## Version 2!?
 
-Oh shit! I'm redoing this bitch. The current iteration of [andrews.codes](http://www.andrews.codes/) makes the fans work on my laptop work overtime, so that's not good. I don't do anything with it, likewise, it doesn't do much for me. In an effort to make my own website useful, display new work easily, as well as have a go-to system in place to build for others, it was time to give v2 a branch.  
+Oh shit! I'm redoing this bitch. The current iteration of [andrews.codes](http://www.andrews.codes/) makes the fan on my laptop work overtime, so that's not good. I don't do anything with current version, likewise, it doesn't do much for me. In an effort to make my own website useful, display new work easily, as well as have a go-to system in place to build for others, it was time to give v2 a branch.  
 
 Over the next couple weeks I'll be pulling ideas from v1 that are working and rewrite everything!
 
