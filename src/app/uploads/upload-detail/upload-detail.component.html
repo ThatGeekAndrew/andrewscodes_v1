@@ -1,7 +1,29 @@
-<div class="card upload-file">
+<div class="card upload-file" (click)="open(assetDetails)">
   <img class="card-img" [src]="upload.url" alt="{{upload.name}}">
-  <div class="card-img-overlay p-0">
-    <button (click)='deleteUpload()' class="close px-2">&times;</button>
-  </div>
-  <!-- <h6 class="card-title">{{upload.name}}</h6> -->
 </div>
+
+<ng-template #assetDetails let-d="dismiss" let-c="close">
+  <div class="modal-header">
+    <h4 class="modal-title">
+      {{upload.name}}
+      <i class="fas fa-pencil-alt small text-muted"></i>
+    </h4>
+    <button type="button" class="close" aria-label="Close" (click)="d()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="row no-gutters">
+    <div class="col-8 d-flex bg-dark">
+      <img class="img-fluid m-auto" [src]="upload.url" alt="{{upload.name}}">
+    </div>
+    <div class="col-4 bg-light">
+      Content. lol
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-link text-danger" (click)="c('delete')">
+      <i class="fa fa-trash mr-2"></i>Delete
+    </button>
+    <span class="ml-auto">Uploaded {{upload.created_on}}</span>
+  </div>
+</ng-template>

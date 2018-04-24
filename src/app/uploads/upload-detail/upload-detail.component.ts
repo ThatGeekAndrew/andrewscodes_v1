@@ -4,6 +4,8 @@ import { UploadService } from '../shared/upload.service';
 
 import { Upload } from '../shared/upload';
 
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 @Component({
   selector: 'upload-detail',
   templateUrl: './upload-detail.component.html',
@@ -13,9 +15,18 @@ export class UploadDetailComponent {
 
   @Input() upload: Upload;
 
-  constructor(private upSvc: UploadService) { }
+  constructor(private upSvc: UploadService, private modalService: NgbModal) { }
 
-  deleteUpload() {
-    this.upSvc.deleteUpload(this.upload);
+  open(content: any) {
+    const modalRef = this.modalService.open( content, {
+      size: 'lg',
+      centered: true,
+      windowClass: 'animated fadeIn',
+      // backdropClass: 'blurred'
+    }).result.then((result) => {
+      if (result == 'delete') {
+        this.upSvc.deleteUpload(this.upload);
+      }
+    };
   }
 }
