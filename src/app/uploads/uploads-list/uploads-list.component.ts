@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 import { UploadService } from '../shared/upload.service';
+
 import { Upload } from '../shared/upload';
 
 import { Observable } from 'rxjs/Observable';
-
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'uploads-list',
