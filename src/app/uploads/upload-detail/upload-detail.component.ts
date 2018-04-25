@@ -27,6 +27,6 @@ export class UploadDetailComponent {
       if (result == 'delete') {
         this.upSvc.deleteUpload(this.upload);
       }
-    };
+    });
   }
 }
