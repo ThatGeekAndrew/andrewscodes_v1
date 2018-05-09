@@ -1,33 +1,48 @@
-<div class="row">
-  <div class="col-md-6 col-lg-9 mb-2">
-    <user-form></user-form>
-  </div>
-  <div class="col">
-    <div class="list-group">
-      <button (click)="signInWithGoogle()" class="list-group-item list-group-item-active btn-google">
-        <i class="fab fa-google fa-lg"></i>
-        <span class="d-sm-none">Connect Google</span>
-      </button>
+<div class="container py-3">
+  <div class="row">
+    <aside class="col-lg-3 col-md-4 col-sm-5">
+      <user-profile></user-profile>
+    </aside>
 
-      <button (click)="signInWithGithub()" class="list-group-item list-group-item-active btn-github">
-        <i class="fab fa-github fa-lg"></i>
-        <span class="d-sm-none">Connect GitHub</span>
-      </button>
+    <main class="col-lg-9 col-md-8 col-sm-7">
 
-      <button (click)="signInWithFacebook()" class="list-group-item list-group-item-active btn-facebook">
-        <i class="fab fa-facebook fa-lg"></i>
-        <span class="d-sm-none">Connect Facebook</span>
-      </button>
+      <div class="row">
+        <div class="col-8 mx-auto">
+          <h3>Log in</h3>
+          <div class="btn-group">
+            <button (click)="signInWithGoogle()" class="btn btn-outline-secondary btn-google">
+              <i class="fab fa-google fa-lg"></i>
+              <span class="d-none d-sm-block">Google</span>
+            </button>
 
-      <button (click)="signInWithTwitter()" class="list-group-item list-group-item-active btn-twitter">
-        <i class="fab fa-twitter fa-lg"></i>
-        <span class="d-sm-none">Connect Twitter</span>
-      </button>
+            <button (click)="signInWithGithub()" class="btn btn-outline-secondary btn-github">
+              <i class="fab fa-github fa-lg"></i>
+              <span class="d-none d-sm-block">GitHub</span>
+            </button>
 
-      <button (click)="signInAnonymously()" class="list-group-item list-group-item-active btn-github">
-        <i class="fa fa-user-secret fa-lg"></i>
-        <span class="d-sm-none">Connect Anonymously</span>
-      </button>
-    </div>
+            <button (click)="signInWithFacebook()" class="btn btn-outline-secondary btn-facebook">
+              <i class="fab fa-facebook fa-lg"></i>
+              <span class="d-none d-sm-block">Facebook</span>
+            </button>
+
+            <button (click)="signInWithTwitter()" class="btn btn-outline-secondary btn-twitter">
+              <i class="fab fa-twitter fa-lg"></i>
+              <span class="d-none d-sm-block">Twitter</span>
+            </button>
+
+            <button (click)="signInAnonymously()" class="btn btn-outline-secondary btn-github">
+              <i class="fa fa-user-secret fa-lg"></i>
+              <span class="d-none d-sm-block">Anon</span>
+            </button>
+          </div>
+          <hr>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-9 mb-2 mx-auto">
+        <user-form></user-form>
+      </div>
+
+    </main>
   </div>
 </div>
