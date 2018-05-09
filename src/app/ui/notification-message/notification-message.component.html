@@ -1,12 +1,14 @@
-<div *ngIf="notify.msg | async as msg" class="alert mt-2"
+<div *ngIf="notify.msg | async as msg" class="alert notification"
   [ngClass]="{
     'alert-danger': msg.style == 'error',
     'alert-success': msg.style == 'success',
     'alert-info': msg.style == 'info'
   }">
-  {{ msg.content }}
+  <span class="mr-auto">
+    {{ msg.content }}
+  </span>
 
-  <button class="close" (click)="notify.clear()">
+  <button class="close align-self-start" (click)="notify.clear()">
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
