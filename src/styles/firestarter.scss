@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 @import url('https://fonts.googleapis.com/css?family=Palanquin');
 
 ///// Content
@@ -6,7 +7,7 @@
 $heading-font: 'Palanquin', sans-serif;
 
 body {
-  margin-top: 4rem;
+  margin-top: 3.55rem;
   overflow-y: scroll;
 }
 
@@ -56,4 +57,97 @@ overflow: auto;
 .btn-google:focus {
   color: white;
   background-color: #DD4B39;
+}
+
+.ghost-card {
+  background-color: rgba(#222, 0.25);
+
+  .ghosted{
+    background-color: rgba(#222, 0.25);
+
+    &:hover, &:focus {
+      background-color: rgba(#222, 0.35);
+    }
+    &:active {
+      background-color: rgba(#222, 0.45);
+    }
+  }
+}
+
+.btn-glare {
+  color: white !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+
+  span {
+    z-index: 20;
+  }
+
+  &:after {
+    background: #aaa;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .2;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 750ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: -10;
+  }
+}
+
+.btn-glare:hover {
+  &:after {
+    left: 120%;
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+}
+
+.home-hero {
+  @include angle(after);
+  color: white;
+  background-color: #4e4376;
+  background-image: linear-gradient(70deg, #2b5876 0, #4e4376 100%);
+  z-index: 1;
+
+  h1 {
+    font-family: $heading-font;
+    font-weight: 700;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font;
+  font-weight: 700;
+}
+
+.about-me {
+  @include angle(after, true);
+  font-size: 1.3rem;
+  margin: -3rem 0;
+  padding-top: 15rem;
+  padding-bottom: 8rem;
+  background-image: url('assets/images/funky-lines.png');
+  background-repeat: repeat;
+  z-index: 0;
+}
+
+.portfolio {
+  padding: 15rem 0;
+  background-image: linear-gradient(-20deg, #2b5876 0, #4e4376 100%);
+}
+
+.code-pen {
+  margin-top: -3rem;
+  @include angle(before, true);
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  z-index: 2;
+  color: white;
+  background-color: #333;
 }
