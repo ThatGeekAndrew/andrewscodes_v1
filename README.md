@@ -11,6 +11,7 @@ Over the next couple weeks I'll be pulling ideas from v1 that are working and re
 ## 🚘 Roadmap
 
 * Reiterate Homepage
+* Set up Firebase rules
 * Project Page
 * User Profiles
   * Ability to request project quote
