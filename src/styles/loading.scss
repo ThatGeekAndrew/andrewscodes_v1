@@ -3,6 +3,7 @@ app-root:empty + .loading {
   z-index: 100;
   h1 {
     font-family: "courier", monospace;
+    font-weight: 400;
     color: limegreen;
     margin-bottom: 50px;
   }
