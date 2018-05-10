@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css?family=Palanquin');
 
 ///// Content
-
 $heading-font: 'Palanquin', sans-serif;
 
 body {
@@ -26,37 +25,48 @@ body {
 }
 
 .modal {
-overflow-y: auto;
+  overflow-y: auto;
 }
 
 .modal-open {
-overflow: auto;
-
+  overflow: auto;
 }
 
 ///// Social Buttons
 
-.btn-twitter:hover,
-.btn-twitter:focus {
-  color: white;
-  background-color: #55ACEE;
+.btn-twitter {
+  color: #55ACEE;
+
+  &:hover, &:focus {
+    color: white;
+    background-color: #55ACEE;
+  }
 }
-.btn-facebook:hover,
-.btn-facebook:focus {
-  color: white;
-  background-color: #3B5998;
+.btn-facebook {
+  color: #3B5998;
+
+  &:hover, &:focus {
+    color: white;
+    background-color: #3B5998;
+  }
 }
 
-.btn-github:hover,
-.btn-github:focus {
-  color: white;
-  background-color: #333333;
+.btn-github:hover {
+  color: #333333;
+
+  &:hover, &:focus {
+    color: white;
+    background-color: #333333;
+  }
 }
 
-.btn-google:hover,
-.btn-google:focus {
-  color: white;
-  background-color: #DD4B39;
+.btn-google {
+  color: #DD4B39;
+
+  &:hover, &:focus {
+    color: white;
+    background-color: #DD4B39;
+  }
 }
 
 .ghost-card {
@@ -95,7 +105,7 @@ overflow: auto;
     position: absolute;
     top: -50px;
     transform: rotate(35deg);
-    transition: all 750ms cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
     width: 50px;
     z-index: -10;
   }
@@ -114,11 +124,6 @@ overflow: auto;
   background-color: #4e4376;
   background-image: linear-gradient(70deg, #2b5876 0, #4e4376 100%);
   z-index: 1;
-
-  h1 {
-    font-family: $heading-font;
-    font-weight: 700;
-  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -143,11 +148,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .code-pen {
-  margin-top: -3rem;
   @include angle(before, true);
+  margin-top: -3rem;
   padding-top: 6rem;
   padding-bottom: 6rem;
   z-index: 2;
   color: white;
   background-color: #333;
+}
+
+.social-login {
+  @include angle(after, true);
+  background: #6699ff;
+  padding-bottom: 3rem;
+}
+
+.login-form {
+  background: #333;
+  padding: 6rem 0;
 }
