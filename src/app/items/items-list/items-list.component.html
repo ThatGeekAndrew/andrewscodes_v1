@@ -1,19 +1,26 @@
-<h1>Items</h1>
+<div class="container pb-3">
+  <div class="row">
 
-<p>This page is a demo of a very basic todo list in Angular, using the Firebase Realtime DB on the backend.</p>
+    <main class="col">
+      <h1>Items</h1>
+
+      <p>This page is a demo of a very basic todo list in Angular, using the Firebase Realtime DB on the backend.</p>
 
 
-<item-form></item-form>
+      <item-form></item-form>
 
-<hr>
+      <hr>
 
 
-<div *ngFor="let item of items | async" class="mt-3">
-  <item-detail [item]='item'></item-detail>
+      <div *ngFor="let item of items | async" class="mt-3">
+        <item-detail [item]='item'></item-detail>
+      </div>
+
+      <div class="text-right mt-3">
+        <button type="button" class="btn btn-danger" (click)='deleteItems()'>Delete Entire List</button>
+      </div>
+
+      <loading-spinner *ngIf="showSpinner"></loading-spinner>
+    </main>
+  </div>
 </div>
-
-<div class="text-right mt-3">
-  <button type="button" class="btn btn-danger" (click)='deleteItems()'>Delete Entire List</button>
-</div>
-
-<loading-spinner *ngIf="showSpinner"></loading-spinner>

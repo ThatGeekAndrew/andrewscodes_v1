@@ -1,15 +1,22 @@
-<h3>Project Files</h3>
+<div class="container pb-3">
+  <div class="row">
 
-<hr>
+    <main class="col">
+      <h3>Project Files</h3>
 
-<upload-form></upload-form>
+      <hr>
 
-<hr>
+      <upload-form></upload-form>
 
-<div class="row">
-  <div class="col-lg-3 col-md-6 pb-2" *ngFor="let upload of uploads | async">
-    <upload-detail [upload]='upload'></upload-detail>
+      <hr>
+
+      <div class="row">
+        <div class="col-lg-3 col-md-6 pb-2" *ngFor="let upload of uploads | async">
+          <upload-detail [upload]='upload'></upload-detail>
+        </div>
+      </div>
+
+      <loading-spinner *ngIf="showSpinner"></loading-spinner>
+    </main>
   </div>
 </div>
-
-<loading-spinner *ngIf="showSpinner"></loading-spinner>
