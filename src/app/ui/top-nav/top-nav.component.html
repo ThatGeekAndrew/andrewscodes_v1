@@ -24,7 +24,9 @@
           <a class="nav-link" routerLink="/uploads">Uploads</a>
         </li>
         <li class="nav-item" *ngIf="(auth.user | async);">
-          <a routerLink="" (click)="open(logoutModal)" class="nav-link">Logout</a>
+          <button (click)="open(logoutModal)" class="btn btn-link border-0 nav-link">
+            <strong>Logout</strong>
+          </button>
         </li>
       </ul>
     </div>
