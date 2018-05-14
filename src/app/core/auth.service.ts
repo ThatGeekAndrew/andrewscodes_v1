@@ -61,7 +61,7 @@ export class AuthService {
   private oAuthLogin(provider: firebase.auth.AuthProvider) {
     return this.afAuth.auth.signInWithPopup(provider)
       .then((credential) => {
-        this.notify.update('Welcome to Firestarter!!!', 'success');
+        this.notify.update('Welcome to andrews.codes!', 'success');
         return this.updateUserData(credential.user);
       })
       .catch((error) => this.handleError(error) );
@@ -72,7 +72,7 @@ export class AuthService {
   anonymousLogin() {
     return this.afAuth.auth.signInAnonymously()
       .then((user) => {
-        this.notify.update('Welcome to Firestarter!!!', 'success');
+        this.notify.update('Welcome to andrews.codes!', 'success');
         return this.updateUserData(user); // if using firestore
       })
       .catch((error) => {
@@ -87,7 +87,7 @@ export class AuthService {
   emailSignUp(email: string, password: string) {
     return this.afAuth.auth.createUserWithEmailAndPassword(email, password)
       .then((user) => {
-        this.notify.update('Welcome to Firestarter!!!', 'success');
+        this.notify.update('Welcome to andrews.codes!', 'success');
         return this.updateUserData(user); // if using firestore
       })
       .catch((error) => this.handleError(error) );
@@ -96,7 +96,7 @@ export class AuthService {
   emailLogin(email: string, password: string) {
     return this.afAuth.auth.signInWithEmailAndPassword(email, password)
       .then((user) => {
-        this.notify.update('Welcome to Firestarter!!!', 'success')
+        this.notify.update('Welcome to andrews.codes!', 'success')
         return this.updateUserData(user); // if using firestore
       })
       .catch((error) => this.handleError(error) );
@@ -131,7 +131,7 @@ export class AuthService {
     const data: User = {
       uid: user.uid,
       email: user.email || null,
-      displayName: user.displayName || 'nameless user',
+      displayName: user.displayName || 'Anon',
       photoURL: user.photoURL || 'https://goo.gl/Fz9nrQ',
     };
     return userRef.set(data);
