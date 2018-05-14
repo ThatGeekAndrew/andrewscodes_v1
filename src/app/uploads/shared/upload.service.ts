@@ -41,7 +41,7 @@ export class UploadService {
       (snapshot: firebase.storage.UploadTaskSnapshot) =>  {
         // upload in progress
         const snap = snapshot;
-        upload.progress = (snap.bytesTransferred / snap.totalBytes) * 100
+        upload.progress = (snap.bytesTransferred / snap.totalBytes) * 100;
       },
       (error) => {
         // upload failed
@@ -52,6 +52,7 @@ export class UploadService {
         if (uploadTask.snapshot.downloadURL) {
           upload.url = uploadTask.snapshot.downloadURL;
           upload.name = upload.file.name;
+          upload.upload_date = new Date().getTime();
           this.saveFileData(upload);
           return;
         } else {

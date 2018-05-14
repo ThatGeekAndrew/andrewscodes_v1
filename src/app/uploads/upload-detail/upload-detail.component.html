@@ -17,13 +17,17 @@
       <img class="img-fluid m-auto" [src]="upload.url" alt="{{upload.name}}">
     </div>
     <div class="col-4 bg-light">
-      Content. lol
+      <div class="card-body">
+        Content will eventually be here.
+      </div>
     </div>
   </div>
   <div class="modal-footer">
     <button class="btn btn-link text-danger" (click)="c('delete')">
       <i class="fa fa-trash mr-2"></i>Delete
     </button>
-    <span class="ml-auto">Uploaded {{upload.created_on}}</span>
+    <small class="ml-auto text-muted">
+      Uploaded on {{upload.upload_date | date:'short'}}
+    </small>
   </div>
 </ng-template>
