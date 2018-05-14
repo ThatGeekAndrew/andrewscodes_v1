@@ -1,5 +1,5 @@
 <div class="card upload-file" (click)="open(assetDetails)">
-  <img class="card-img" [src]="upload.url" alt="{{upload.name}}">
+  <img (load)="checkPortrait($event)" [src]="upload.url" alt="{{upload.name}}">
 </div>
 
 <ng-template #assetDetails let-d="dismiss" let-c="close">

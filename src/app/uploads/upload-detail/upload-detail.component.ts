@@ -17,6 +17,14 @@ export class UploadDetailComponent {
 
   constructor(private upSvc: UploadService, private modalService: NgbModal) { }
 
+  checkPortrait(content: any) {
+    // console.log('loaded', content)
+    let pic = content.path[0];
+    if(pic.naturalHeight > pic.naturalWidth){
+        pic.className = 'portrait';
+    }
+  }
+
   open(content: any) {
     const modalRef = this.modalService.open( content, {
       size: 'lg',
