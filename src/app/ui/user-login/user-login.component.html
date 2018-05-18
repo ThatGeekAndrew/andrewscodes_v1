@@ -3,28 +3,28 @@
     <div class="row">
       <div class="col-lg-9 col-md-8 col-sm-7 mx-auto">
         <h3 class="pb-3">Log in</h3>
-        <div class="btn-group bg-light rounded d-flex">
-          <button (click)="signInWithGoogle()" class="btn w-100 btn-outline-secondary btn-google">
+        <div class="btn-group ghost-card rounded d-flex">
+          <button (click)="signInWithGoogle()" class="btn w-100 btn-outline-dark btn-google">
             <i class="fab fa-google fa-lg"></i>
             <span class="d-none d-sm-block">Google</span>
           </button>
 
-          <button (click)="signInWithGithub()" class="btn w-100 btn-outline-secondary btn-github">
+          <button (click)="signInWithGithub()" class="btn w-100 btn-outline-dark btn-github">
             <i class="fab fa-github fa-lg"></i>
             <span class="d-none d-sm-block">GitHub</span>
           </button>
 
-          <button (click)="signInWithFacebook()" class="btn w-100 btn-outline-secondary btn-facebook">
+          <button (click)="signInWithFacebook()" class="btn w-100 btn-outline-dark btn-facebook">
             <i class="fab fa-facebook fa-lg"></i>
             <span class="d-none d-sm-block">Facebook</span>
           </button>
 
-          <button (click)="signInWithTwitter()" class="btn w-100 btn-outline-secondary btn-twitter">
+          <button (click)="signInWithTwitter()" class="btn w-100 btn-outline-dark btn-twitter">
             <i class="fab fa-twitter fa-lg"></i>
             <span class="d-none d-sm-block">Twitter</span>
           </button>
 
-          <button (click)="signInAnonymously()" class="btn w-100 btn-outline-secondary btn-github">
+          <button (click)="signInAnonymously()" class="btn w-100 btn-outline-dark btn-github">
             <i class="fa fa-user-secret fa-lg"></i>
             <span class="d-none d-sm-block">Anon</span>
           </button>
@@ -38,6 +38,21 @@
     <div class="row">
       <div class="col-md-6 col-lg-9 mb-2 mx-auto">
         <user-form></user-form>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-2 mx-auto">
+
+        <div class="list-group">
+          <strong class="list-group-item">Why sign up?</strong>
+          <div class="list-group-item">
+            Yes
+          </div>
+          <div class="list-group-item">
+            Okay
+          </div>
+          <div class="list-group-item">
+            Do it
+          </div>
+        </div>
       </div>
     </div>
   </div>
