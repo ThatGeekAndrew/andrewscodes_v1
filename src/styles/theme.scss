@@ -2,6 +2,13 @@
 @import 'mixins';
 @import url('https://fonts.googleapis.com/css?family=Palanquin');
 
+:root {
+  --mAngle: -15rem;
+	--pAngle: 15rem;
+  --mMobile: -5rem;
+	--pMobile: 5rem;
+}
+
 ///// Content
 $heading-font: 'Palanquin', sans-serif;
 
@@ -23,7 +30,8 @@ body {
 ///// Social Buttons
 
 .btn-twitter {
-  color: #55ACEE;
+  // color: #55ACEE;
+  color: white;
 
   &:hover, &:focus {
     color: white;
@@ -31,7 +39,8 @@ body {
   }
 }
 .btn-facebook {
-  color: #3B5998;
+  // color: #3B5998;
+  color: white;
 
   &:hover, &:focus {
     color: white;
@@ -39,8 +48,9 @@ body {
   }
 }
 
-.btn-github:hover {
-  color: #333333;
+.btn-github {
+  // color: #333333;
+  color: white;
 
   &:hover, &:focus {
     color: white;
@@ -49,7 +59,8 @@ body {
 }
 
 .btn-google {
-  color: #DD4B39;
+  // color: #DD4B39;
+  color: white;
 
   &:hover, &:focus {
     color: white;
@@ -102,7 +113,7 @@ body {
 .btn-glare:hover {
   &:after {
     left: 120%;
-    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 750ms cubic-bezier(0.19, 1, 0.22, 1);
   }
 }
 
@@ -121,10 +132,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-me {
   @include angle(after, true);
-  font-size: 1.3rem;
+  font-size: 1.6rem;
+  line-height: 4.5rem;
   margin: -3rem 0;
   padding-top: 15rem;
-  padding-bottom: 8rem;
+  padding-bottom: 12rem;
   background-image: url('assets/images/funky-lines.png');
   background-repeat: repeat;
   z-index: 0;
@@ -145,13 +157,71 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #333;
 }
 
+footer {
+  padding: 5rem 0;
+  text-align: center;
+
+  // background-image: url('assets/images/what-the-hex.png');
+  &:before {
+    content: '';
+    color: red;
+    background: #333;
+    clip-path: polygon(50% 33%, 0 0, 100% 0);
+    width: 100%;
+  }
+}
+
 .social-login {
   @include angle(after, true);
-  background: #6699ff;
+  color: white;
+  background-image: linear-gradient(-120deg, #2b5876 0, #4e4376 100%);
   padding-bottom: 3rem;
 }
 
 .login-form {
-  background: #333;
+  background-image: url('assets/images/what-the-hex.png');
   padding: 6rem 0;
+}
+
+.distorted {
+	position: relative;
+
+	&::after, &::before {
+		content: attr(data-effect);
+		position: absolute;
+		mix-blend-mode: color;
+		left: 0;
+		top: 0;
+	}
+}
+
+.distorted::after{
+	color: #c9106e;
+  transform: translateX(5px);
+  animation: glitchLayer1 10s linear infinite;
+}
+
+.distorted::before {
+	color: lime;
+  transform: translateX(-5px);
+  animation: glitchLayer2 10s linear infinite;
+  animation-delay: 50ms;
+}
+
+@keyframes glitchLayer1 {
+  0%, 25%, 27%, 81%, 83%, 84%, 88%, 100%  {
+    transform: translateX(0px);
+  }
+  26%, 82%, 87% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes glitchLayer2 {
+  0%, 25%, 27%, 81%, 83%, 86%, 88%, 100% {
+    transform: translateX(0px);
+  }
+  26%, 82%, 87% {
+    transform: translateX(-5px);
+  }
 }
